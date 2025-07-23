@@ -3,79 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cham Artifact Viewer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Libre Baskerville', serif;
-      background: #f4f4f4;
-      color: #3c2f24;
-    }
-
-    .hero {
-      position: relative;
-      height: 100vh;
-      background-image: url('chammuseum_Pics/da-nang-museum-of-cham-sculpture.png');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
-
-    .hero-box {
-      background-color: rgba(255, 255, 255, 0.96);
-      color: #3c2f24;
-      border: 2px solid #d4a55d;
-      border-radius: 20px;
-      padding: 40px 50px;
-      max-width: 600px;
-      text-align: center;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      z-index: 1;
-      position: relative;
-    }
-
-    .hero-back-button {
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      background-color: #d4a55d;
-      color: white;
-      padding: 8px 14px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .language-selector {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-
-    .language-selector select {
-      padding: 6px 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      background-color: #f4f0e8;
-      font-size: 14px;
-    }
-  </style>
+  <title>Apsara Dancer Statue</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="test_artifact-stylet.css" />
 </head>
 <body>
-  <a id="back-button" class="hero-back-button" href="#">← Back to Main Menu</a>
-
+  <!-- Language Selector -->
   <div class="language-selector">
+    <label for="language">🌐</label>
     <select id="language">
       <option value="en">English</option>
       <option value="vi">Tiếng Việt</option>
@@ -84,44 +19,74 @@
     </select>
   </div>
 
-  <div class="hero">
+  <!-- Hero Section -->
+  <section class="hero">
+    <a href="index.html" class="hero-back-button">← Back to Main Menu</a>
     <div class="hero-box">
-      <h1 id="artifact-title">Apsara Dancer Statue</h1>
-      <p id="artifact-desc">10th Century | Sandstone | Cham Art</p>
+      <div class="lang lang-en">
+        <h1>Apsara Dancer Statue</h1>
+        <p>10th Century | Sandstone | Cham Art</p>
+      </div>
+      <div class="lang lang-vi">
+        <h1>Tượng Vũ Nữ Apsara</h1>
+        <p>Thế kỷ 10 | Đá sa thạch | Nghệ thuật Chăm</p>
+      </div>
+      <div class="lang lang-zh">
+        <h1>阿普萨拉舞者雕像</h1>
+        <p>10世纪 | 砂岩 | 占族艺术</p>
+      </div>
+      <div class="lang lang-ko">
+        <h1>압사라 무용수 조각상</h1>
+        <p>10세기 | 사암 | 참파 예술</p>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Content Section 1 -->
+  <section class="slide white">
+    <div class="slide-content">
+      <div class="lang lang-en">
+        <h2>A Glimpse into Cham Aesthetics</h2>
+        <p>The Apsara Dancer Statue... (English paragraph)</p>
+        <p>Carved during the 10th century... (English paragraph)</p>
+      </div>
+      <div class="lang lang-vi">
+        <h2>Một góc nhìn về thẩm mỹ Chăm</h2>
+        <p>Tượng vũ nữ Apsara... (Vietnamese paragraph)</p>
+        <p>Được chạm khắc vào thế kỷ 10... (Vietnamese paragraph)</p>
+      </div>
+      <div class="lang lang-zh">
+        <h2>占族美学的一瞥</h2>
+        <p>阿普萨拉舞者雕像...（中文段落）</p>
+        <p>雕刻于10世纪...（中文段落）</p>
+      </div>
+      <div class="lang lang-ko">
+        <h2>참파 미학의 한 단면</h2>
+        <p>압사라 무용수 조각상... (Korean paragraph)</p>
+        <p>10세기에 조각된 이 작품은... (Korean paragraph)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repeat other sections the same way -->
+  <!-- ... -->
 
   <script>
-    const translations = {
-      en: {
-        'artifact-title': 'Apsara Dancer Statue',
-        'artifact-desc': '10th Century | Sandstone | Cham Art',
-        'back-button': '← Back to Main Menu'
-      },
-      vi: {
-        'artifact-title': 'Tượng Vũ Nữ Apsara',
-        'artifact-desc': 'Thế kỷ 10 | Sa thạch | Nghệ thuật Chăm',
-        'back-button': '← Trở về Trang Chính'
-      },
-      zh: {
-        'artifact-title': '阿普萨拉女雕像',
-        'artifact-desc': '10世纪 | 砂岩 | 占婆艺术',
-        'back-button': '← 返回主页'
-      },
-      ko: {
-        'artifact-title': '압사라 무용수 조각상',
-        'artifact-desc': '10세기 | 사암 | 참파 예술',
-        'back-button': '← 메인 메뉴로'
-      }
-    };
+    const langSelector = document.getElementById("language");
+    const allLangSections = document.querySelectorAll(".lang");
 
-    document.getElementById("language").addEventListener("change", function () {
-      const selectedLang = this.value;
-      const trans = translations[selectedLang];
-      for (const id in trans) {
-        document.getElementById(id).textContent = trans[id];
-      }
+    function updateLanguage(selected) {
+      allLangSections.forEach(el => {
+        el.style.display = el.classList.contains("lang-" + selected) ? "block" : "none";
+      });
+    }
+
+    langSelector.addEventListener("change", () => {
+      updateLanguage(langSelector.value);
     });
+
+    // Default language
+    updateLanguage("en");
   </script>
 </body>
 </html>
