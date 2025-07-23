@@ -3,73 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apsara Dancer Statue</title>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="test_artifact-stylet.css" />
+  <title>Cham Artifact Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Libre Baskerville', serif;
+      background: #f4f4f4;
+      color: #3c2f24;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-image: url('chammuseum_Pics/da-nang-museum-of-cham-sculpture.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-box {
+      background-color: rgba(255, 255, 255, 0.96);
+      color: #3c2f24;
+      border: 2px solid #d4a55d;
+      border-radius: 20px;
+      padding: 40px 50px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+      position: relative;
+    }
+
+    .hero-back-button {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      background-color: #d4a55d;
+      color: white;
+      padding: 8px 14px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .language-selector {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .language-selector select {
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #f4f0e8;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <a href="index.html" class="hero-back-button">← Back to Main Menu</a>
+  <a id="back-button" class="hero-back-button" href="#">← Back to Main Menu</a>
+
+  <div class="language-selector">
+    <select id="language">
+      <option value="en">English</option>
+      <option value="vi">Tiếng Việt</option>
+      <option value="zh">中文</option>
+      <option value="ko">한국어</option>
+    </select>
+  </div>
+
+  <div class="hero">
     <div class="hero-box">
-        <h1>Apsara Dancer Statue</h1>
-        <p>10th Century | Sandstone | Cham Art</p>
+      <h1 id="artifact-title">Apsara Dancer Statue</h1>
+      <p id="artifact-desc">10th Century | Sandstone | Cham Art</p>
     </div>
-  </section>
+  </div>
 
-  <!-- Content Section 1 -->
-  <section class="slide white">
-    <div class="slide-content">
-      <h2>A Glimpse into Cham Aesthetics</h2>
-      <p>
-        The Apsara Dancer Statue (Tượng vũ nữ Apsara) captures the elegance and poise of celestial dancers found in Hindu and Cham mythology. 
-        This sandstone sculpture reflects the influence of both spiritual and courtly ideals, combining graceful motion with meditative serenity.
-      </p>
-      <p>
-        Carved during the 10th century, it demonstrates the Cham artists' deep appreciation for rhythm, beauty, and symbolic storytelling. 
-        Apsaras were believed to dance in the heavens, entertaining gods and embodying divine grace.
-      </p>
-    </div>
-  </section>
+  <script>
+    const translations = {
+      en: {
+        'artifact-title': 'Apsara Dancer Statue',
+        'artifact-desc': '10th Century | Sandstone | Cham Art',
+        'back-button': '← Back to Main Menu'
+      },
+      vi: {
+        'artifact-title': 'Tượng Vũ Nữ Apsara',
+        'artifact-desc': 'Thế kỷ 10 | Sa thạch | Nghệ thuật Chăm',
+        'back-button': '← Trở về Trang Chính'
+      },
+      zh: {
+        'artifact-title': '阿普萨拉女雕像',
+        'artifact-desc': '10世纪 | 砂岩 | 占婆艺术',
+        'back-button': '← 返回主页'
+      },
+      ko: {
+        'artifact-title': '압사라 무용수 조각상',
+        'artifact-desc': '10세기 | 사암 | 참파 예술',
+        'back-button': '← 메인 메뉴로'
+      }
+    };
 
-  <div class="section-divider"></div>
-
-  <!-- Content Section 2 -->
-  <section class="slide white side-by-side">
-    <div class="image">
-      <img src="ChamMuseum_Pics/VunuAss_Background.jpg" alt="Close-up of Apsara Dancer statue" />
-      <figcaption>Detailed carving of the Apsara's flowing attire and serene face.</figcaption>
-    </div>
-    <div class="text">
-      <h2>Symbolism and Craft</h2>
-      <p>
-        The dancer's fluid posture and ornate jewelry speak volumes about Cham craftsmanship. 
-        Notice the curved hip, extended arms, and hair arranged in a traditional bun — each feature imbued with ritual significance and balance.
-      </p>
-      <p>
-        This statue likely adorned a temple wall, celebrating divine femininity and the harmony between art, dance, and worship.
-      </p>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- Content Section 3 -->
-  <section class="slide white side-by-side reverse">
-    <div class="image">
-      <img src="ChamMuseum_Pics/VunuAss_Museum.jpg" alt="Apsara statue in Cham Museum" />
-      <figcaption>The Apsara dancer exhibited at the Museum of Cham Sculpture, Da Nang.</figcaption>
-    </div>
-    <div class="text">
-      <h2>Legacy and Cultural Value</h2>
-      <p>
-        As one of the finest surviving Cham sculptures of a female figure, the Apsara Dancer offers rare insight into premodern Vietnamese art. 
-        It bridges sacred myth and material form, making it a vital piece of cultural heritage.
-      </p>
-      <p>
-        Today, it stands not only as a work of art but also as a symbol of Champa's refined worldview — where dance, devotion, and divinity flowed as one.
-      </p>
-    </div>
-  </section>
+    document.getElementById("language").addEventListener("change", function () {
+      const selectedLang = this.value;
+      const trans = translations[selectedLang];
+      for (const id in trans) {
+        document.getElementById(id).textContent = trans[id];
+      }
+    });
+  </script>
 </body>
 </html>
