@@ -3,57 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bodhisattva Tara Statue</title>
+  <title>Apsara Dancer Statue</title>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="artifact-style.css" />
+  <link rel="stylesheet" href="test_artifact-stylet.css" />
 </head>
 <body>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <label for="language">🌐</label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="vi">Tiếng Việt</option>
+      <option value="zh">中文</option>
+      <option value="ko">한국어</option>
+    </select>
+  </div>
+
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Bodhisattva Tara Statue</h1>
-      <p>8th Century | Bronze | Champa Culture</p>
+    <a href="index.html" class="hero-back-button">← Back to Main Menu</a>
+    <div class="hero-box">
+      <div class="lang lang-en">
+        <h1>Apsara Dancer Statue</h1>
+        <p>10th Century | Sandstone | Cham Art</p>
+      </div>
+      <div class="lang lang-vi">
+        <h1>Tượng Vũ Nữ Apsara</h1>
+        <p>Thế kỷ 10 | Đá sa thạch | Nghệ thuật Chăm</p>
+      </div>
+      <div class="lang lang-zh">
+        <h1>阿普萨拉舞者雕像</h1>
+        <p>10世纪 | 砂岩 | 占族艺术</p>
+      </div>
+      <div class="lang lang-ko">
+        <h1>압사라 무용수 조각상</h1>
+        <p>10세기 | 사암 | 참파 예술</p>
+      </div>
     </div>
   </section>
 
   <!-- Content Section 1 -->
   <section class="slide white">
     <div class="slide-content">
-      <h2>A National Treasure of Vietnam</h2>
-      <p>
-        The bronze statue of Bodhisattva Tara, recognized as a National Treasure of Vietnam in 2013, is one of the most exquisite Champa sculptures ever discovered. It represents the goddess of compassion in Mahayana Buddhism, radiating serenity and divine grace.
-      </p>
+      <div class="lang lang-en">
+        <h2>A Glimpse into Cham Aesthetics</h2>
+        <p>The Apsara Dancer Statue (Tượng vũ nữ Apsara) captures the elegance and poise of celestial dancers found in Hindu and Cham mythology. This sandstone sculpture reflects the influence of both spiritual and courtly ideals, combining graceful motion with meditative serenity.</p>
+        <p>Carved during the 10th century, it demonstrates the Cham artists' deep appreciation for rhythm, beauty, and symbolic storytelling. Apsaras were believed to dance in the heavens, entertaining gods and embodying divine grace.</p>
+      </div>
+      <div class="lang lang-vi">
+        <h2>Một Cái Nhìn vào Thẩm Mỹ Champa</h2>
+        <p>Tượng vũ nữ Apsara thể hiện sự thanh thoát và duyên dáng của những vũ công thiên giới trong thần thoại Hindu và Chăm. Bức tượng bằng sa thạch này phản ánh ảnh hưởng từ cả lý tưởng tâm linh lẫn cung đình, kết hợp chuyển động uyển chuyển với sự tĩnh lặng thiền định.</p>
+        <p>Được chạm khắc vào thế kỷ thứ 10, tượng thể hiện sự trân trọng sâu sắc của nghệ nhân Chăm đối với nhịp điệu, vẻ đẹp và khả năng kể chuyện biểu tượng. Apsara được tin là những vũ nữ múa hát trên thiên đường để làm vui lòng các vị thần.</p>
+      </div>
+      <div class="lang lang-zh">
+        <h2>占宫美学的一瞥</h2>
+        <p>阿普萨拉舞者雕像展现了印度教与占宫神话中天女的优雅与姿态。这属砂岩雕像融合了宗教与宮庭理想，兼具优雅动感与冲冷宜定的定静。</p>
+        <p>雕像于10世纪刻刻，显示了占宫艺术家对节奏、美感和象征讲故的深刻理解。据传，阿普萨拉在天界跳舞，娱乐神灵，象征神性之美。</p>
+      </div>
+      <div class="lang lang-ko">
+        <h2>참파 미학의 한 단면</h2>
+        <p>압사라 무용수 조각상은 히든국교와 참파 신화에 들어오는 천사 무한의 위안과 유성을 담고 있습니다. 이 사암 조각은 정신적과 교신적 이상을 가면해, 유성한 움직임과 명사적 정찬을 결합해 나타냈습니다.</p>
+        <p>10세기에 조각된 이 작품은 참파 연술가들의 다양한 반복과 미래에 대한 감상, 그리고 상의적인 이야기 구조에 대한 깊은 이해를 보여줍니다. 압사라는 하늘에서 신들을 기용하며 춤을 운동하는 여사들이라고 내었습니다.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Content Section 2 -->
-  <section class="slide white">
-    <div class="slide-content">
-      <h2>Discovery and Craftsmanship</h2>
-      <p>
-        Unearthed in the Mỹ Sơn Sanctuary in 1978, this masterpiece is 1.13 meters tall and weighs 65 kilograms. Crafted from high-quality bronze, it showcases delicate jewelry, a tall crown, and flowing robes — clear evidence of advanced metallurgical skill during the 8th century.
-      </p>
+  <script>
+    const langSelector = document.getElementById("language");
+    const allLangSections = document.querySelectorAll(".lang");
 
-      <figure>
-        <img src="artifact01.jpg" alt="Close-up of Tara statue's face" />
-        <figcaption>Close-up showing the facial features of Bodhisattva Tara.</figcaption>
-      </figure>
-      
-      <figure>
-        <img src="artifact02.jpg" alt="Side view of Tara statue" />
-        <figcaption>Side view highlighting posture and bronze details.</figcaption>
-      </figure>
-    </div>
-  </section>
+    function updateLanguage(selected) {
+      allLangSections.forEach(el => {
+        el.style.display = el.classList.contains("lang-" + selected) ? "block" : "none";
+      });
+    }
 
-  <!-- Content Section 3 -->
-  <section class="slide white">
-    <div class="slide-content">
-      <h2>Spiritual Significance</h2>
-      <p>
-        The Tara statue is a rare example of female imagery in Cham art. Her posture exudes confidence and divinity, with one hand raised in a gesture of protection. The statue reveals how Hindu-Buddhist beliefs coexisted in Champa spiritual life.
-      </p>
-    </div>
-  </section>
+    langSelector.addEventListener("change", () => {
+      updateLanguage(langSelector.value);
+    });
+
+    // Default language
+    updateLanguage("en");
+  </script>
 </body>
 </html>
